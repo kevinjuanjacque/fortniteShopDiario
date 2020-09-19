@@ -1,38 +1,34 @@
 import React from 'react'
 import { UseFetchShops } from './hook/useFetchShops'
 import './style/styleHome.css'
-import { ItemCard } from './components/ItemCard';
+import { ProductosDestacados } from './components/Products/ProductosDestacados';
 
 export const HomeShopFortnite = () => {
 
     const { data,loading } = UseFetchShops();
 
     return (
-        <>
+        <div >
             
             <nav id="navegador" className="navbar navbar-dark ">
                 <span className="navbar-brand mb-0 h1">TIENDA DEL DIA FORTNITE</span>
             </nav>
 
             
-
-            <div className="container ">
-                <h1 class="display-3 text-center">PRODUCTOS DESTACADOS</h1>
-                {loading && (
-                    <div className="spinner-border mt-5" role="status">
-                        <span className="sr-only ">Loading...</span>
-                    </div>
-                )}
-                <div className="row row-cols-1 row-cols-md-2">
-                {
-                    data.map((item)=>{
-
-                        return <ItemCard key={item.id} item={item}/>
-
-                    })
-                }
-                </div>
-            </div>
-        </>
+            {
+                (loading) ? (
+                        <div className="spinner-border mt-5" role="status">
+                            <span className="sr-only ">Loading...</span>
+                        </div>
+                ):
+                    (
+                        <div>
+                            <ProductosDestacados data={data.featured} title="Productos destacados" />
+                        <ProductosDestacados data={data.daily} title="Productos diarios" />
+                        </div>
+                    )
+            }
+            
+        </div>
     )
 }

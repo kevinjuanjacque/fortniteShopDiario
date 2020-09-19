@@ -9,7 +9,7 @@ export const ItemCard = ({item}) => {
                         <img id='stack' src={item.full_background} className="card-img-top " alt="..."/>
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">{item.name}</h5>
+                        <h5 className="card-title text-truncate">{item.name}</h5>
                         <p className="card-text">{item.price}</p>
                     </div>
                 </div>

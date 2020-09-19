@@ -4,3 +4,15 @@
 body{
     background-color: #f9f9f9;
 }
+
+#cuerpoCard {
+    overflow-x: scroll;
+    white-space: nowrap;
+    max-width: 950px;
+    padding: 1rem;
+    }
+
+#muestra{
+    background: linear-gradient(to top left, #181145 30%, #e14081 100%);
+    margin-top: 10px;
+}

@@ -9,9 +9,11 @@ export const FetchServicesFortniteShop = async() => {
                 'Authorization':'71a28538-d14fe4c7-320b1dea-8b9adb2c'   
             })
         });
-    const {featured}=await resp.json()
-
-    return featured;
+    const data=await resp.json()
+    // const data=await resp.json();
+    // console.log(data);
+    // console.log(data)
+    return data;
 
 
 

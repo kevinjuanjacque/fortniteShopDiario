@@ -10,7 +10,7 @@ export const UseFetchShops = () => {
     useEffect(()=>{
 
         FetchServicesFortniteShop().then((service)=>{
-
+            // console.log(service)
             setData({
                 data:service,
                 loading:false
