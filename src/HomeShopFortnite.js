@@ -22,9 +22,19 @@ export const HomeShopFortnite = () => {
                         </div>
                 ):
                     (
-                        <div>
-                            <ProductosDestacados data={data.featured} title="Productos destacados" />
-                        <ProductosDestacados data={data.daily} title="Productos diarios" />
+                        <div >
+                            
+                            {/* <div className="row row-cols-9 ml-2 mr-2">
+                                <button className="btn btn-light col m-2"> {'<'} </button> */}
+                                <ProductosDestacados className="col-6 m-2" data={data.featured} title="Productos destacados" />
+                                {/* <button className="btn btn-light col m-2 mr-2"> {'>'} </button>
+                            </div> */}
+                            
+                            <ProductosDestacados data={data.daily} title="Productos diarios" />
+
+                            <ProductosDestacados data={data.specialFeatured} title="Productos diarios destacados" />
+                                
+                            
                         </div>
                     )
             }

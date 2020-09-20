@@ -15,4 +15,5 @@ body{
 #muestra{
     background: linear-gradient(to top left, #181145 30%, #e14081 100%);
     margin-top: 10px;
+    border-radius: 2em;
 }
